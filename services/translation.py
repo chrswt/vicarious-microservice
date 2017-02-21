@@ -7,15 +7,18 @@ def translate_word(word):
     """Translates a single word to Pig Latin"""
     VOWELS = {'a', 'e', 'i', 'o', 'u'}
 
+    if word[0].isupper():
+        return translate_word(word.lower()).capitalize()
+
     # Case: word begins with a vowel
-    if word[0] in VOWELS:
-        return word + 'yay'
+    if word[0].lower() in VOWELS:
+        return word.lower() + 'yay'
 
     # Case: word begins with a consonant        
     else:
         for index, char in enumerate(word):
-            if char in VOWELS:
-                return word[index:] + word[:index] + 'ay'
+            if char.lower() in VOWELS:
+                return word[index:].lower() + word[:index].lower() + 'ay'
 
     # Case: word contains no vowels
     return word + 'ay'
