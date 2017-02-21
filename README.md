@@ -10,6 +10,10 @@ This is a microservice built on the Flask Python microframework. This microservi
 - [Requests](http://docs.python-requests.org/en/master/) 2.13.0
 - [Setuptools](https://pypi.python.org/pypi/setuptools) 20.10.1
 
+## Try the Deployed Version
+A version of this microservice has been deployed on [PythonAnywhere](https://www.pythonanywhere.com/) and you can test out this microservice in the console using the following command:
+`curl -d "Query anything you want\!" -i -X POST http://chriswt.pythonanywhere.com/api/translate`
+
 ## Setup
 
 ### Install all dependencies
