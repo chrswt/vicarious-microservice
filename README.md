@@ -34,3 +34,5 @@ The API accepts `Content-Type: text/plain` or `Content-Type: application/x-www-f
 ## Resources
 - Requirements generated using [pipreqs](https://github.com/bndr/pipreqs)
 - Setup structure inspired by umermansoor's [microservices](https://github.com/umermansoor/microservices)
+- Lorem Ipsum test paragraph generated from [loripsum](http://loripsum.net/)
+- Testing framework: [unittest](https://docs.python.org/2/library/unittest.html)
