@@ -5,16 +5,16 @@ app = Flask(__name__)
 
 def translate_word(word):
     """Translates a single word to Pig Latin"""
-    vowels = 'aeiou'
+    VOWELS = {'a', 'e', 'i', 'o', 'u'}
 
     # Case: word begins with a vowel
-    if word[0] in vowels:
+    if word[0] in VOWELS:
         return word + 'yay'
 
     # Case: word begins with a consonant        
     else:
         for index, char in enumerate(word):
-            if char in vowels:
+            if char in VOWELS:
                 return word[index:] + word[:index] + 'ay'
 
     # Case: word contains no vowels
@@ -32,7 +32,7 @@ def on_post():
         return response
 
     elif type(data) is not str:
-        response = make_response('Error: POST requests for translations must'
+        response = make_response('Error: POST requests for translations must '
                                  'be provided in the "text/plain" format.')
         response.status_code = 415 # Unsupported Media Type
         return response
