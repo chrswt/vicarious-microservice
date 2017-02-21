@@ -10,8 +10,8 @@ venv:
 	$(VIRTUALENV) venv
 
 install: clean venv
-	. venv/bin/activate; python setup.py install
-	. venv/bin/activate; python setup.py develop
+	. venv/bin/activate; python setup.py -q install
+	. venv/bin/activate; python setup.py -q develop
 
 launch: venv shutdown
 	. venv/bin/activate; python services/translation.py
