@@ -29,7 +29,7 @@ The API can be interacted with at the `127.0.0.1/api/translate` endpoint. For ex
 
 `curl -d "Query string here" -i -X POST 127.0.0.1/api/translate`
 
-The API accepts `Content-Type: text/plain` and returns `Content-Type: text/plain`. 
+The API accepts `Content-Type: text/plain` or `Content-Type: application/x-www-form-urlencoded` (it will also attempt to read from any `json` stream) and returns `Content-Type: text/plain`.
 
 ## Resources
 - Requirements generated using [pipreqs](https://github.com/bndr/pipreqs)
